@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/turbo-rails": "^7.1.0",
+    "@rails/request.js": "^0.0.5",
+    "autoprefixer": "^10.4.0",
+    "esbuild": "^0.14.2",
+    "postcss": "^8.4.4",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^10.0.2",
+    "postcss-simple-vars": "^6.0.3",
+    "tailwindcss": "^2.2.19"
+  },
+  "scripts": {
+    "show_esbuild" : "bin/rails esbuild:show",
+    "kill_esbuild" : "bin/rails esbuild:kill",
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds",
+    "build:css": "tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+  }
+}
