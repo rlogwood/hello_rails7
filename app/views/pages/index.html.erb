@@ -15,4 +15,6 @@
   </div>
 </div>
 
-<% console %>
+<% if Rails.env.development? %>
+  <% console %>
+<% end %>

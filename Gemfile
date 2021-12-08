@@ -62,14 +62,7 @@ group :development do
   # gem "spring"
 end
 
-# experiment with debug gem in production
-group :production do
-  # Start debugger with binding.b [https://github.com/ruby/debug]
-  gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]
-
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console", ">= 4.1.0"
-end
+# NOTE: adding debug and web-console gems didn't have any effect on hatchbox when using <% console %>
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]

@@ -19,7 +19,7 @@ module HelloRails7
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # have to explicitly enable web console in prod
-    config.web_console.development_only = false
+    # have to explicitly enable web console in prod, tested but has no effect currently on hatchbox
+    # config.web_console.development_only = false
   end
 end
